@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Page title + external stylesheet -->
+  <title>Course Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Page container that holds sidebar + content -->
+<div id="container">
+
+  <!-- LEFT SIDEBAR: loading, filtering, sorting -->
+  <aside id="sidebar">
+
+    <!-- Main title -->
+    <h1>Course Explorer</h1>
+
+    <!-- Upload section -->
+    <section>
+      <h2>Load Data</h2>
+
+      <!-- File input restricted to .json -->
+      <input type="file" id="fileInput" accept=".json">
+
+      <!-- Error messages appear here -->
+      <div id="error" class="error"></div>
+    </section>
+
+    <!-- Filter options grouped together -->
+    <section>
+      <h2>Filters</h2>
+
+      <!-- Each filter dropdown populated dynamically by JS -->
+      <label>Department:
+        <select id="filterDepartment"><option value="All">All</option></select>
+      </label>
+
+      <label>Level:
+        <select id="filterLevel"><option value="All">All</option></select>
+      </label>
+
+      <label>Credits:
+        <select id="filterCredits"><option value="All">All</option></select>
+      </label>
+
+      <label>Instructor:
+        <select id="filterInstructor"><option value="All">All</option></select>
+      </label>
+    </section>
+
+    <!-- Sorting menu -->
+    <section>
+      <h2>Sort</h2>
+      <label>Sort By:
+        <select id="sortBy">
+          <option value="none">None</option>
+          <option value="titleAZ">Title A-Z</option>
+          <option value="titleZA">Title Z-A</option>
+          <option value="idAsc">ID Asc</option>
+          <option value="idDesc">ID Desc</option>
+          <option value="semAsc">Semester Asc</option>
+          <option value="semDesc">Semester Desc</option>
+        </select>
+      </label>
+    </section>
+
+  </aside>
+
+  <!-- MAIN CONTENT AREA: list + details -->
+  <main id="content">
+
+    <!-- Course list -->
+    <h2>Courses</h2>
+    <ul id="courseList"></ul>
+
+    <!-- Detailed view of selected course -->
+    <h2>Details</h2>
+    <div id="details"></div>
+
+  </main>
+
+</div>
+
+<!-- External JavaScript -->
+<script src="scripts.js"></script>
+
+</body>
+</html>

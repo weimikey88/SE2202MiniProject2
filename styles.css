@@ -1,0 +1,113 @@
+/* Basic page setup */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;      /* white background */
+}
+
+/* Main flex container for sidebar + content */
+#container {
+  display: flex;
+  min-height: 100vh;        /* sidebar fills full height */
+}
+
+/* LEFT SIDEBAR */
+#sidebar {
+  width: 260px;             /* fixed sidebar width */
+  background: #2a2e45;      /* dark blue-grey */
+  color: white;
+  padding: 1.3rem;
+}
+
+/* Sidebar main title */
+#sidebar h1 {
+  margin-top: 0;
+  margin-bottom: 1.3rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* Sidebar section headers */
+#sidebar h2 {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  padding-bottom: 0.3rem;
+}
+
+/* Filter + sorting labels */
+#sidebar label {
+  display: block;
+  margin: 0.6rem 0;
+}
+
+/* Dropdowns + file input styling */
+#sidebar select,
+#sidebar input[type="file"] {
+  width: 100%;              /* match sidebar width */
+  margin-top: 0.2rem;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Error message styling */
+.error {
+  margin-top: 0.5rem;
+  color: #ff9d9d;           /* light red text for error message */
+  font-weight: bold;
+}
+
+/* Main Content (right side) */
+#content {
+  flex: 1;                  /* take remaining space */
+  padding: 1.5rem 2rem;
+}
+
+/* Section headers for list/details */
+#content h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* Course list container */
+#courseList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  max-height: 40vh;         /* scrollable list area */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+/* Individual list item */
+#courseList li {
+  padding: 0.6rem;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+/* Hover effect to show interactiveness */
+#courseList li:hover {
+  background: #eaf3ff;      /* light blue */
+}
+
+/* Detailed course information box */
+#details {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  min-height: 200px;        /* prevents collapsing */
+  white-space: pre-wrap;    /* preserves formatting of detailsHTML() */
+  border-radius: 4px;
+}
+
+/* When no results are found */
+.no-results {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #000000;
+}
